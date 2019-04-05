@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Check mount
-if ! [ "$(stat -f -c '%T' '/tmp')" == 'tmpfs' ]; then
-    echo "Please mount /tmp as tmpfs" >&2
-    exit 1
-fi
 
 # Setup stats auth
 user=${STATS_USER:-admin}
